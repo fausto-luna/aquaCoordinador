@@ -23,7 +23,7 @@
     .modal{
          width: 50%;
     }
-    .modal-footer,.modal-content{
+    .modal-footer{
         display: flex;
         justify-content: center;
     }
@@ -493,7 +493,7 @@
         $observaciones = $observacionesPSGet->contenido->{1}->observaciones;
         $modalEditarObservaciones = '<div id="modalEditarObservaciones" class="modal editarObservaciones">
                                         <div class="modal-content">
-                                            <h4>Editar Observaciones</h4>
+                                            <h4 class="centered">Editar Observaciones</h4>
                                             <div class="row">
                                                 <form class="col s12" id="formEditObservaciones">
                                                     <div class="row">
@@ -506,8 +506,8 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
-                                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarObservacionBtn" idPS="'.$idPS.'">Editar</a>
+                                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarObservacionBtn" idPS="'.$idPS.'">Editar</a>
+                                        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
                                         </div>
                                     </div>';
     }
@@ -1607,7 +1607,7 @@
                 <div class="col s12">
                     <h5>INSTALACIONES EXISTENTES EN EL LLOC</h5>
                     <div class="card z-depth-2">
-                        <table class="highlight centered">
+                        <table class="highlight">
                             <thead>
                             <tr>
                                 <th>RANGO</th>
@@ -1925,9 +1925,11 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
+           
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarUrgenciaBtn" idPS="<?php echo $idPS; ?>">Modificar</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
         </div>
+
     </div>
     <div id="editarEstado" class="modal">
         <div class="modal-content">
@@ -1941,8 +1943,9 @@
             </div>
         </div>
         <div class="modal-footer col s12">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarEstadoBtn" idPS="<?php echo $idPS; ?>">Modificar</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarEstadoBtn" idPS="<?php echo $idPS; ?>">Modificar</a>
+           
         </div>
     </div>
     <div id="editarNaturaleza" class="modal">
@@ -1957,8 +1960,9 @@
             </div>
         </div>
         <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarNaturalezaBtn" idPS="<?php echo $idPS; ?>">Modificar</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarNaturalezaBtn" idPS="<?php echo $idPS; ?>">Modificar</a>
+            
         </div>
     </div>
 
@@ -1974,8 +1978,9 @@
             </div>
         </div>
         <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarEquipoBtn" idPS="<?php echo $idPS; ?>">Modificar</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="editarEquipoBtn" idPS="<?php echo $idPS; ?>">Modificar</a>
+           
         </div>
     </div>
 
@@ -2005,71 +2010,92 @@
             </div>
         </div>
         <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn" cantidad_botones="<?php echo $count; ?>" id="guardarCambiosOperarios">Guardar</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn" cantidad_botones="<?php echo $count; ?>" id="guardarCambiosOperarios">Guardar</a>
+            
         </div>
     </div>
 
     <div id="modalOfertarServicio" class="modal">
         <div class="modal-content">
-            <h4>Ofertar servicio</h4>
-            <div class="row">
-                <form action="#" class="col s12" id="ofertarServicioForm">
-                    <div class="row">
-                        <div class="input-field col s4">
+            <h4 class="centered">Ofertar servicio</h4>
+
+           
+                <form action="#" class="col 12" id="ofertarServicioForm">
+                    
+                        <div class="input-field">
                             <select id="personalSelect">
                                 <option value="" disabled selected>Selecciona destinatario</option>
                             </select>
                         </div>
-                        <div class="input-field col s8">
+
+                        <div class="input-field">
                             <textarea id="ofertaServicio" class="materialize-textarea"></textarea>
                             <label for="ofertaServicio">Servicio a ofertar</label>
                         </div>
-                    </div>
+                    
                 </form>
-            </div>
-            <form target="_blank" id="PS_To_Ofs" name="PS_To_Ofs" method="POST" action="<?php echo AQUAACTION; ?>" style="display:inline;">
-                <input type="hidden" id="SOURCE" name="SOURCE" value="OFERTA_SERVICIO">
-                <input type="hidden" id="ACTION" name="ACTION" value="CREAR_OFERTA_SERVICIO_FROM_PS">
-                <input type="hidden" id="PS" name="PS" value="<?php echo $idPS; ?>">
+            
+
+            <form class="col 12" target="_blank" id="PS_To_Ofs" name="PS_To_Ofs" method="POST" action="<?php echo AQUAACTION; ?>" style="display:inline;">
+                <input class="" type="hidden" id="SOURCE" name="SOURCE" value="OFERTA_SERVICIO">
+                <input class="" type="hidden" id="ACTION" name="ACTION" value="CREAR_OFERTA_SERVICIO_FROM_PS">
+                <input class="" type="hidden" id="PS" name="PS" value="<?php echo $idPS; ?>">
             </form>
+
         </div>
+
         <div class="modal-footer">
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="ofertarFormBtn">Crear oferta</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="tareaServicioBtn" idPS="<?php echo $idPS; ?>">Crear tarea</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
         </div>
+
     </div>
+
     <div id="modalOfertarMantenimiento" class="modal">
         <div class="modal-content">
-            <h4>Ofertar mantenimiento</h4>
-            <div class="row">
-                <form action="#" class="col s12" id="ofertarServicioForm">
-                    <div class="row">
-                        <div class="input-field col s4">
-                            <select id="personalSelectMantenimiento">
-                                <option value="" disabled selected>Selecciona destinatario</option>
-                            </select>
-                        </div>
-                        <div class="input-field col s8">
-                            <textarea id="ofertaMantenimiento" class="materialize-textarea"></textarea>
-                            <label for="ofertaMantenimiento">Mantenimiento a ofertar</label>
-                        </div>
+
+
+
+            
+                <div class="col 12 centered">
+                    <h4>Ofertar mantenimiento</h4>
+                </div>
+          
+                
+            <form action="#" class="col 12" id="ofertarServicioForm">
+                
+                    <div class=" input-field ">
+                        <select id="personalSelectMantenimiento">
+                            <option value="" disabled selected>Selecciona destinatario</option>
+                        </select>
                     </div>
-                </form>
-            </div>
+                    <div class=" input-field">
+                        <textarea id="ofertaMantenimiento" class="materialize-textarea"></textarea>
+                        <label for="ofertaMantenimiento">Mantenimiento a ofertar</label>
+                    </div>
+                
+            </form>
+           
+           
             <form target="_blank" id="PS_To_OfM" name="PS_To_OfM" method="POST" action="<?php echo AQUAACTION; ?>" style="display:inline;">
                 <input type="hidden" id="SOURCE" name="SOURCE" value="OFERTA_MANTENIMIENTO">
                 <input type="hidden" id="ACTION" name="ACTION" value="CREAR_OFERTA_MANTENIMIENTO_FROM_PS">
                 <input type="hidden" id="PS" name="PS" value="<?php echo $idPS; ?>">
             </form>
+            
+            
         </div>
-        <div class="modal-footer">
+
+        <div class="row modal-footer">
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="ofertarMantFormBtn">Crear oferta</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="tareaMantenimientoBtn" idPS="<?php echo $idPS; ?>">Crear tarea</a>
             <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
         </div>
     </div>
+
+
     <div id="modalInformeTV" class="modal">
         <div class="modal-content">
             <h4>Informe técnico</h4>
