@@ -1,0 +1,308 @@
+html,
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body.bodyNoOverflow {
+    overflow: hidden;
+}
+
+body.bodyOverflow {
+    overflow: auto !important;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.columnHeight {
+    height: 500px;
+}
+
+.mapa {
+    margin: 10px auto;
+    width: 100%;
+    height: 500px;
+}
+
+#infoPS {
+    display: none;
+}
+
+.itemPS,
+.itemEquipo,
+.itemPSAll,
+.datepicker {
+    cursor: pointer;
+}
+
+.itemPSSelected {
+    background-color: dodgerblue !important;
+}
+
+.brand-logo img {
+    height: 50px;
+    margin-top: 7px;
+}
+
+#infoPSEquipo {
+    display: none;
+}
+
+#PSMapLocation {
+    height: 350px;
+}
+
+
+/* Autocompletar */
+
+.pac-container {
+    z-index: 1051 !important;
+}
+
+.collapsible-body {
+    padding: 5px;
+}
+
+.itemPSFilter {
+    display: none;
+}
+
+.modal {
+    max-height: 80%;
+    width: 80%;
+    overflow: visible;
+   
+}
+
+
+.equipoPre {
+    font-size: 1.5rem;
+}
+
+.cancelarPS {
+    display: none;
+}
+
+.cancelarPSCola {
+    display: none;
+}
+
+
+/* Estilos estados */
+
+.estadoPS3,
+.estadoPSundefined,
+.estadoPS {
+    border-left: 15px solid grey;
+}
+
+.estadoPS5 {
+    border-left: 15px solid pink;
+}
+
+.estadoPS6 {
+    border-left: 15px solid orange;
+}
+
+.estadoPS7 {
+    border-left: 15px solid green;
+}
+
+.estadoPS8 {
+    border-left: 15px solid blue;
+}
+
+
+/* Estilos tipo PS */
+
+.tipoPS1 {
+    border-right: 15px solid green;
+}
+
+.tipoPS3 {
+    border-right: 15px solid orange;
+}
+
+.tipoPS3 {
+    border-right: 15px solid cornflowerblue;
+}
+
+
+/* Estilos estados Equipo */
+
+.estadoEquipo34 {
+    border-left: 15px solid orange;
+}
+
+.estadoEquipo35 {
+    border-left: 15px solid blue;
+    background-color: #AAA !important;
+}
+
+.estadoEquipo36 {
+    border-left: 15px solid green;
+}
+
+.estadoEquipo37 {
+    border-left: 15px solid pink;
+}
+
+.estadoEquipo38 {
+    border-left: 15px solid grey;
+    background-color: #AAA !important;
+}
+
+.estadoEquipo38.itemPSSelected,
+.estadoEquipo35.itemPSSelected {
+    border-right: 15px solid dodgerblue;
+    background-color: #AAA !important;
+}
+
+.estadoEquipo39 {
+    border-left: 15px solid black;
+}
+
+.estadoEquipo40 {
+    border-left: 15px solid blue;
+}
+
+.estadoEquipoBloqueado {
+    border-left: 15px solid grey;
+    background-color: #AAA !important;
+}
+
+.estadoEquipoBloqueado.itemPSSelected {
+    border-right: 15px solid dodgerblue;
+    background-color: #AAA !important;
+}
+
+
+/* Estilos urgencia */
+
+.urgencia1 {
+    background-color: #ff7043 !important;
+}
+
+.urgencia2 {
+    background-color: #f44336 !important;
+}
+
+.urgencia1.itemPSSelected {
+    background-color: dodgerblue !important;
+    /*  color: #ff7043;
+  font-weight: bold;*/
+}
+
+.urgencia2.itemPSSelected {
+    background-color: dodgerblue !important;
+    /*color: #f44336;
+  font-weight: bold;*/
+}
+
+.urgencia1.itemPSSelected .title {
+    background-color: #ff7043 !important;
+}
+
+.urgencia2.itemPSSelected .title {
+    background-color: #f44336 !important;
+}
+
+.instalacionItemEye {
+    color: #9e9e9e;
+}
+
+.instalacionItemEye.active {
+    color: #26a69a;
+}
+
+.accionesBtns a {
+    padding: 0;
+}
+.editarBtn{
+    margin-top: -10px;
+}
+
+.modalInstalaciones {
+    overflow: auto !important;
+}
+
+.tabs .tab a {
+    color: #C62728;
+    padding: 0px;
+}
+
+.collection {
+    margin-bottom: 60px;
+}
+
+#sidenav-overlay {
+    z-index: 996;
+}
+
+.actionBtn {
+    color: #9e9e9e;
+}
+
+.actionBtn:hover {
+    color: rgb(255, 152, 0);
+}
+
+.imageBtn {
+    color: rgb(0, 150, 136);
+}
+
+.imageBtn:hover {
+    color: rgb(255, 152, 0);
+}
+
+.card-image .card-title {
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.card-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.collection.ofertas {
+    margin-bottom: 0px;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: #039be5;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+    color: #0576af;
+}
+
+.card-action {
+    min-height: 50px;
+}
+
+.validarFotoInstalacion,
+.validarFotoPortada {
+    float: left;
+    margin-right: 10px !important;
+}
+
+.rechazarFotoInstalacion,
+.rechazarFotoPortada {
+    float: right;
+    margin-right: 0px !important;
+}
+
+.datosAgentePS dt {
+    font-weight: bold;
+}
+
+.collection.ofertas {
+    font-size: 18px;
+}

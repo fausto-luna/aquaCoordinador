@@ -1,0 +1,22 @@
+{
+  "name": "aqualyt_psdigital_coordinador",
+  "version": "1.0.0",
+  "description": "APP Coordinador",
+  "main": "functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progress-sh/AquaLyt_PSDigital_Coordinador.git"
+  },
+  "keywords": [
+    "Aqualyt"
+  ],
+  "author": "Progress SH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/progress-sh/AquaLyt_PSDigital_Coordinador/issues"
+  },
+  "homepage": "https://github.com/progress-sh/AquaLyt_PSDigital_Coordinador#readme"
+}
